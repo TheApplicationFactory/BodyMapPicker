@@ -16,10 +16,7 @@ import UIKit
 /// Add the BodyImageMap Struct to a MapPicker
 struct BodyImageMap: ImageMap {
     var imageMap = [MapPart]()
-    
-    init() {
-        setupMap()
-    }
+    var frame = CGRect()
     
     // Set up the map here.
     // TODO: Needs further refactoring.
