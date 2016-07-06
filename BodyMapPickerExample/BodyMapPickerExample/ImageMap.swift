@@ -7,14 +7,19 @@
 // See https://github.com/TheApplicationFactory/BodyMapPicker/blob/master/LICENSE for license information
 // See https://github.com/TheApplicationFactory/BodyMapPicker/blob/master/README.md for the list project contributors
 
-import Foundation
+import UIKit
 
 protocol ImageMap {
     var imageMap: [MapPart] {get set}
+    init(frame: CGRect)
+    mutating func setupMap()
 }
 
 extension ImageMap {
-    
+    init(frame: CGRect) {
+        self.init(frame: frame)
+        self.setupMap()
+    }
 }
 
 func ==(lhs: MapPart, rhs: MapPart) -> Bool {

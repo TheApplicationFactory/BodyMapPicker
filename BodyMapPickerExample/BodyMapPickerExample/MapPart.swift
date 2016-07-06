@@ -17,19 +17,13 @@ import UIKit
 struct MapPart: MapPartProtocol {
     var path: UIBezierPath
     var title: String
-    var text: String?
-    var mapSideValue: Int32
+    var text: String
+    var side: MapSide
     
     init(path: UIBezierPath, title: String, text: String, side: MapSide){
         self.path = path
         self.title = title
         self.text = text
-        
-        // TODO: This one has to be fixed
-        // This is supposed to be a shortcut so the mapSideValue can be set easily by setting it to
-        // .Front, .Back, .Left, .Right, .LeftFront, .LeftBack, .RightFront, .RightBack
-        // without passing integer values
-        // I know this breaks the code, but it has the highest priority at the moment to figure it out
         self.side = side
     }
 }
@@ -38,22 +32,16 @@ struct MapPart: MapPartProtocol {
 protocol MapPartProtocol {
     var path: UIBezierPath {get set}
     var title: String {get set}
-    var text: String? {get set}
-    var mapSideValue: Int32 {get set}
+    var text: String {get set}
+    var side: MapSide {get set}
+    
 }
 
 // MARK: - MapPartProtocolExtension
 /// # protocol extension: MapPartProtocol
 /// Enables usage of easy enumeration of Front and Back side
 extension MapPartProtocol {
-    var side: MapSide {
-        get {
-            return MapSide(rawValue: self.mapSideValue)!
-        }
-        set {
-            self.mapSideValue = newValue.rawValue
-        }
-    }
+    // Stuff will come here
 }
 
 enum MapSide: Int32 {
