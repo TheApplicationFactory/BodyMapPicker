@@ -1,10 +1,11 @@
+// BodyMapPicker Example App is open source
+// Version 0.1
 //
-//  ViewController.swift
-//  BodyMapPickerExample
+// Copyright (c) 2014 - 2016 The Application Factory AS and the project contributors
+// Available under the MIT license
 //
-//  Created by Geert-Jan Nilsen on 06/07/16.
-//  Copyright © 2016 Application Factory. All rights reserved.
-//
+// See https://github.com/TheApplicationFactory/BodyMapPicker/blob/master/LICENSE for license information
+// See https://github.com/TheApplicationFactory/BodyMapPicker/blob/master/README.md for the list project contributors
 
 import UIKit
 
