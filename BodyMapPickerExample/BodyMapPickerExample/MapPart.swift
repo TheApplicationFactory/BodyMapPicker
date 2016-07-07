@@ -17,7 +17,7 @@ import UIKit
 struct MapPart: MapPartProtocol {
     var path: UIBezierPath
     var title: String
-    var text: String
+    var text: String?
     var side: MapSide
     
     init(path: UIBezierPath, title: String, text: String, side: MapSide){
@@ -26,13 +26,19 @@ struct MapPart: MapPartProtocol {
         self.text = text
         self.side = side
     }
+    
+    init(path: UIBezierPath, title: String, side: MapSide){
+        self.path = path
+        self.title = title
+        self.side = side
+    }
 }
 
 // MARK: - MapPartProtocol
 protocol MapPartProtocol {
     var path: UIBezierPath {get set}
     var title: String {get set}
-    var text: String {get set}
+    var text: String? {get set}
     var side: MapSide {get set}
     
 }
@@ -44,6 +50,14 @@ extension MapPartProtocol {
     // Stuff will come here
 }
 
-enum MapSide: Int32 {
-    case Front, Back, Left, Right, LeftFront, LeftBack, RightFront, RightBack
+// MARK: - Enum for easy orientation definition
+enum MapSide {
+    case Front
+    case Back
+    case Left
+    case Right
+    case LeftFront
+    case LeftBack
+    case RightFront
+    case RightBack
 }

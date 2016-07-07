@@ -38,7 +38,11 @@ struct BodyImageMap: ImageMap {
         partPath.addLineToPoint(CGPointMake(group.minX + 0.53235 * group.width, group.minY + 0.49691 * group.height))
         partPath.closePath()
         
-        let trunk = MapPart(path: partPath, title: NSLocalizedString("Trunk", comment: ""), text: NSLocalizedString("Trunk", comment: ""), side: .Front)
+        let trunk = MapPart(path: partPath,
+                           title: NSLocalizedString("Trunk", comment: ""),
+                            text: NSLocalizedString("Junk", comment: ""),
+                            side: .Front)
+        
         imageMap.append(trunk)
         
     }
