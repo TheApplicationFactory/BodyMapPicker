@@ -15,6 +15,7 @@
 		EA0CD9781D2CEBB700FF239F /* BodyImageMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0CD9771D2CEBB700FF239F /* BodyImageMap.swift */; };
 		EA0CD97A1D2CEFB900FF239F /* MapPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0CD9791D2CEFB900FF239F /* MapPart.swift */; };
 		EA0CD97C1D2CF45100FF239F /* ImageMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0CD97B1D2CF45100FF239F /* ImageMap.swift */; };
+		EACD28091E3C02CD0008D3C3 /* BodyMapPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD28081E3C02CD0008D3C3 /* BodyMapPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EA0CD9771D2CEBB700FF239F /* BodyImageMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyImageMap.swift; sourceTree = "<group>"; };
 		EA0CD9791D2CEFB900FF239F /* MapPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPart.swift; sourceTree = "<group>"; };
 		EA0CD97B1D2CF45100FF239F /* ImageMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMap.swift; sourceTree = "<group>"; };
+		EACD28081E3C02CD0008D3C3 /* BodyMapPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyMapPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				EA0CD9771D2CEBB700FF239F /* BodyImageMap.swift */,
 				EA0CD97B1D2CF45100FF239F /* ImageMap.swift */,
 				EA0CD9791D2CEFB900FF239F /* MapPart.swift */,
+				EACD28081E3C02CD0008D3C3 /* BodyMapPicker.swift */,
 			);
 			path = BodyMapPickerExample;
 			sourceTree = "<group>";
@@ -100,11 +103,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Application Factory";
 				TargetAttributes = {
 					EA0CD9601D2CE7CB00FF239F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -144,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACD28091E3C02CD0008D3C3 /* BodyMapPicker.swift in Sources */,
 				EA0CD9671D2CE7CB00FF239F /* ViewController.swift in Sources */,
 				EA0CD97A1D2CEFB900FF239F /* MapPart.swift in Sources */,
 				EA0CD97C1D2CF45100FF239F /* ImageMap.swift in Sources */,
@@ -188,8 +193,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -234,8 +241,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -254,6 +263,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -267,6 +277,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.appfact.BodyMapPickerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -278,6 +289,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.appfact.BodyMapPickerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -300,6 +312,7 @@
 				EA0CD9751D2CE7CB00FF239F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

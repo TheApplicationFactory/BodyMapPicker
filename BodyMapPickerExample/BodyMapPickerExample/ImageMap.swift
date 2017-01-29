@@ -18,7 +18,6 @@ protocol ImageMap {
 }
 
 extension ImageMap {
-    
     init() {
         self.init()
     }

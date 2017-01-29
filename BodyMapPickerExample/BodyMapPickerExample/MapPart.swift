@@ -18,46 +18,61 @@ struct MapPart: MapPartProtocol {
     var path: UIBezierPath
     var title: String
     var text: String?
-    var side: MapSide
+    var side: MapSide?
+    var tag: Int
     
-    init(path: UIBezierPath, title: String, text: String, side: MapSide){
+    init(path: UIBezierPath, title: String, text: String, side: MapSide, tag: Int){
         self.path = path
         self.title = title
         self.text = text
         self.side = side
+        self.tag = tag
     }
     
-    init(path: UIBezierPath, title: String, side: MapSide){
+    init(path: UIBezierPath, title: String, side: MapSide, tag: Int){
         self.path = path
         self.title = title
         self.side = side
+        self.tag = tag
+    }
+    
+    init(path: UIBezierPath, title: String, text: String, tag: Int){
+        self.path = path
+        self.title = title
+        self.text = text
+        self.tag = tag
+    }
+    
+    init(path: UIBezierPath, title: String,tag: Int){
+        self.path = path
+        self.title = title
+        self.tag = tag
     }
 }
 
 // MARK: - MapPartProtocol
 protocol MapPartProtocol {
-    var path: UIBezierPath {get set}
-    var title: String {get set}
-    var text: String? {get set}
-    var side: MapSide {get set}
-    
+    var path: UIBezierPath { get set }
+    var title: String { get set }
+    var text: String? { get set }
+    var side: MapSide? { get set }
+    var tag: Int { get set }
 }
 
 // MARK: - MapPartProtocolExtension
 /// # protocol extension: MapPartProtocol
-/// Enables usage of easy enumeration of Front and Back side
 extension MapPartProtocol {
     // Stuff will come here
 }
 
 // MARK: - Enum for easy orientation definition
 enum MapSide {
-    case Front
-    case Back
-    case Left
-    case Right
-    case LeftFront
-    case LeftBack
-    case RightFront
-    case RightBack
+    case front
+    case back
+    case left
+    case right
+    case leftFront
+    case leftBack
+    case rightFront
+    case rightBack
 }
